@@ -11,3 +11,6 @@ Type in each line of the game board and the program will solve all possible word
 
 There should not be any external dependencies required.
 
+### About
+
+The program uses a file of valid scabble words to create a trie tree. From there, a DFS like solver is used to add neighbors of tiles that have the possibility of leading to valid words. Within each word chain, the visited words are noted so the solver does not reuse the same letter position in a word. However, the visited positions are not stored globally since the same position can be used in  multiple words. 
